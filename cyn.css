@@ -1,0 +1,31 @@
+*{
+	margin:0;
+	padding:0;
+}
+nav{
+		display:flex;
+		background-color:black;
+		justify-content:space-between;
+}
+li{
+	list-style:none;
+	float:left;
+	padding:20px;
+	color:white;
+}
+img{
+		float:left;
+		height:50px;
+		border-radius:30px;
+		
+	
+}
+h1{
+	color:white;
+}
+li:hover{
+		background-color:grey;
+}
+ul{
+	overflow:hidden;
+}
