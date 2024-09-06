@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Name</title>
+		<style>
+			tr, td{
+				border: solid 1px;
+				text-align:center;
+				padding:20px;
+			}
+			input{
+				width: 95%;
+				height:95%;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td colspan="4"><input id="beckyDisplay" type="text"></td>
+			</tr>
+			<tr>
+				<td onclick="becky(1)">1</td>
+				<td onclick="becky(3)">3</td>
+				<td onclick="becky(5)">5</td>
+				<td onclick="becky('-')">-</td>
+			</tr>
+			<tr>
+				<td onclick="becky(7)">7</td>
+				<td onclick="becky(9)">9</td>
+				<td onclick="becky('+')">+</td>
+				<td onclick="beckyCalc()">=</td>
+			</tr>
+			<tr>
+				<td colspan="2" onclick="becky(0)">0</td>
+				<td colspan="2" onclick="beckyClear()">C</td>
+			</tr>
+		</table>
+		
+		<script>
+			const beckyDisplay = document.getElementById("beckyDisplay");
+			
+			function becky(input){
+				beckyDisplay.value += input;
+			}
+			function beckyClear(){
+				beckyDisplay.value = "";
+			}
+			function beckyCalc(){
+				beckyDisplay.value = eval(beckyDisplay.value);
+			}
+		</script>
+	</body>
+</html>
