@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Name</title>
-		<style>
-			tr, td{
-				border: solid 1px;
-				text-align:center;
-				padding:20px;
-			}
-			input{
-				width: 95%;
-				height:95%;
-			}
-		</style>
+	<link rel="icon" type="image/png" href="logo.png">
+		<title>Welcome</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="fav.css">
 	</head>
 	<body>
-		<table>
-			<tr>
-				<td colspan="4"><input id="beckyDisplay" type="text"></td>
-			</tr>
-			<tr>
-				<td onclick="becky(1)">1</td>
-				<td onclick="becky(3)">3</td>
-				<td onclick="becky(5)">5</td>
-				<td onclick="becky('-')">-</td>
-			</tr>
-			<tr>
-				<td onclick="becky(7)">7</td>
-				<td onclick="becky(9)">9</td>
-				<td onclick="becky('+')">+</td>
-				<td onclick="beckyCalc()">=</td>
-			</tr>
-			<tr>
-				<td colspan="2" onclick="becky(0)">0</td>
-				<td colspan="2" onclick="beckyClear()">C</td>
-			</tr>
-		</table>
-		
+		<div class="main">
+			<nav>
+				<div class="logo-region">
+					<img src="logo.png" alt="logo">
+					<h1>RHEMA CONCEPTS</h1>
+				</div>
+				<div class="item-region">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+			<main>
+				<h1 class="big-text">LEARN HOW TO USE A CALCULATOR</h1>
+				<div class="calculator">
+					<input type="text" id="display"readonly>
+					<div class="keys">
+						<button onclick="appendToDisplay('+')" class="big">+</button>
+						<button onclick="appendToDisplay('1')">1</button>
+						<button onclick="appendToDisplay('2')">2</button>
+						<button onclick="appendToDisplay('3')">3</button>
+						<button onclick="appendToDisplay('-')" class="big">-</button>
+						<button onclick="appendToDisplay('4')">4</button>
+						<button onclick="appendToDisplay('5')">5</button>
+						<button onclick="appendToDisplay('6')">6</button>
+						<button onclick="appendToDisplay('*')" class="big">*</button>
+						<button onclick="appendToDisplay('7')">7</button>
+						<button onclick="appendToDisplay('8')">8</button>
+						<button onclick="appendToDisplay('9')">9</button>
+						<button onclick="appendToDisplay('/')" class="big">/</button>
+						<button onclick="appendToDisplay('.')">.</button>
+						<button onclick="clearDisplay('AC')">AC</button>
+						<button onclick="calculate('=')">=</button>
+					</div>
+				</div>
+			</main>
+		</div>
 		<script>
+		function appendToDisplay(input){
+			display.value += input;
+		}
 			
-			
-			function becky(input){
-				beckyDisplay.value += input;
+		function clearDisplay(){
+			display.value ="";
+		}
+		
+		function calculate(){
+			try{
+				display.value= eval(display.value);
 			}
-			function beckyClear(){
-				beckyDisplay.value = "";
+			catch(error){
+				display.value="Error";
 			}
-			function beckyCalc(){
-				beckyDisplay.value = eval(beckyDisplay.value);
 			}
-		</script>
+	</script>
 	</body>
 </html>
