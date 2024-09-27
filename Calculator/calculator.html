@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MY CALCULATOR</title>
+		<link rel="stylesheet" href="calculator.css">
+	</head>
+	<body>
+		<div class="main-body">
+			<div class="title">
+				CALCULATOR
+			</div>
+			<div class="display-screen">
+				<input type="text"  id="displayNumber">
+			</div>
+			<div class="number-display">
+				<div class="numbers">
+					<div class="showNumber" onclick="numberDisplay(7)">7</div>
+					<div class="showNumber" onclick="numberDisplay(8)">8</div>
+					<div class="showNumber" onclick="numberDisplay(9)">9</div>
+					<div class="showNumber" onclick="numberDisplay('+')">+</div>
+				</div>
+				<div class="numbers">
+					<div class="showNumber" onclick="numberDisplay(4)">4</div>
+					<div class="showNumber" onclick="numberDisplay(5)">5</div>
+					<div class="showNumber" onclick="numberDisplay(6)">6</div>
+					<div class="showNumber" onclick="numberDisplay('-')">-</div>
+				</div>
+				<div class="numbers">
+					<div class="showNumber" onclick="numberDisplay(1)">1</div>
+					<div class="showNumber" onclick="numberDisplay(2)">2</div>
+					<div class="showNumber" onclick="numberDisplay(3)">3</div>
+					<div class="showNumber" onclick="numberDisplay('*')">x</div>
+				</div>
+				<div class="numbers">
+					<div class="showNumber" onclick="numberDisplay(0)">0</div>
+					<div class="showNumber" onclick="numberDisplay('.')">.</div>
+					<div class="showNumber" onclick="clearValue()">C</div>
+					<div class="showNumber" onclick="numberDisplay('/')">&divide</div>
+				</div>
+				<div class="submit" onclick="submitValue()">
+					S U B M I T
+				</div>
+			</div>
+		</div>
+		<script src="calculator.js"></script>
+	</body>
+</html>
