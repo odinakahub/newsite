@@ -41,7 +41,7 @@ nav{
 	font-size: 1.5rem;
 	text-align: center;
 }
-@media max-width: 600px{
+@media only screen and (max-width: 600px) {
 	nav{
 		display: block;
 	}
