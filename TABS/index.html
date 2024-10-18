@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main-body">
+        <div class="item" onclick="showValue1()"><p>ODINAKA</p></div>
+        <div class="item">
+            <div class="image">
+                <img src="eee.webp" alt="">
+            </div>
+            <div class="text">
+                <h1>ODINAKA</h1>
+                <p class="real">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+                </p>
+            </div>
+        </div>
+        <div class="item" onclick="showValue2()"><p>UCHE</p></div>
+        <div class="item">
+            <div class="image">
+                <img src="eee.webp" alt="">
+            </div>
+            <div class="text">
+                <h1>Chairman</h1>
+                <p class="real">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+                </p>
+            </div>
+        </div>
+        <div class="item"  onclick="showValue3()"><p>IKENNA</p></div>
+        <div class="item">
+            <div class="image">
+                <img src="eee.webp" alt="">
+            </div>
+            <div class="text">
+                <h1>Chairman</h1>
+                <p class="real">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+                </p>
+            </div>
+        </div>
+        <div class="item" onclick="showValue4()"><p>AMAKA</p></div>
+        <div class="item">
+            <div class="image">
+                <img src="eee.webp" alt="">
+            </div>
+            <div class="text">
+                <h1>Chairman</h1>
+                <p class="real">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showValue1(){
+            const showdiv = document.querySelector('.item:nth-child(2)');
+            const closediv4 = document.querySelector('.item:nth-child(4)')
+            const closediv6 = document.querySelector('.item:nth-child(6)')
+            const closediv8 = document.querySelector('.item:nth-child(8)')
+            showdiv.style.display = 'flex';
+            closediv4.style.display = 'none';
+            closediv6.style.display = 'none';
+            closediv8.style.display = 'none';
+        }
+        function showValue2(){
+            const showdiv = document.querySelector('.item:nth-child(4)');
+            const closediv2 = document.querySelector('.item:nth-child(2)')
+            const closediv6 = document.querySelector('.item:nth-child(6)')
+            const closediv8 = document.querySelector('.item:nth-child(8)')
+            showdiv.style.display = 'flex';
+            closediv2.style.display = 'none';
+            closediv6.style.display = 'none';
+            closediv8.style.display = 'none';
+        }
+        function showValue3(){
+            const showdiv = document.querySelector('.item:nth-child(6)');
+            const closediv4 = document.querySelector('.item:nth-child(4)')
+            const closediv2 = document.querySelector('.item:nth-child(2)')
+            const closediv8 = document.querySelector('.item:nth-child(8)')
+            showdiv.style.display = 'flex';
+            closediv4.style.display = 'none';
+            closediv2.style.display = 'none';
+            closediv8.style.display = 'none';
+        }
+        function showValue4(){
+            const showdiv = document.querySelector('.item:nth-child(8)');
+            const closediv4 = document.querySelector('.item:nth-child(4)')
+            const closediv6 = document.querySelector('.item:nth-child(6)')
+            const closediv2 = document.querySelector('.item:nth-child(2)')
+            showdiv.style.display = 'flex';
+            closediv4.style.display = 'none';
+            closediv6.style.display = 'none';
+            closediv2.style.display = 'none';      }
+
+    </script>
+</body>
+</html>

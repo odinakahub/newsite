@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main-body{
+    background-color: rgb(241, 180, 104);
+    width: 300px;
+    height: 160px;
+    margin: 20px 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+   
+    align-content: flex-start;
+}
+.item{
+    background-color: blueviolet;
+    width: 70px;
+    height: 30px;
+    
+}
+p{
+    color: rgb(253, 212, 212);
+    font-size: 14px;
+    text-align: center;
+}
+.item:nth-child(odd){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    order: -1;
+    width: 25%;
+}
+.item:nth-child(1), .item:nth-child(2){
+    background-color: rgb(214, 168, 41);
+}
+.item:nth-child(3), .item:nth-child(4){
+    background-color: rgb(5, 73, 50);
+}
+.item:nth-child(5), .item:nth-child(6){
+    background-color: rgb(18, 202, 43);
+}
+.item:nth-child(7), .item:nth-child(8){
+    background-color: rgb(144, 143, 218);
+}
+.item:nth-child(even){
+    width: 100%;
+    height: 130px;
+}
+.item:nth-child(odd):hover{
+    background-color: beige;
+    cursor: pointer;
+}
+.item:nth-child(2){
+    display: none;
+}
+.item:nth-child(4){
+    display: none;
+}
+.item:nth-child(6){
+    display: none;
+}
+.item:nth-child(8){
+    display: none;
+}
+
+h1{
+    font-size: 15px;
+    text-align: center;
+}
+.text p{
+    font-size: 9px;
+}
+img{
+    height:130px
+}
