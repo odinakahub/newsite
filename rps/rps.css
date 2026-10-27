@@ -1,0 +1,193 @@
+/* Base Reset and Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main Container */
+.game-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.game-title {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Score Board */
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-label {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #a0aec0;
+  margin-bottom: 5px;
+}
+
+.score-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.vs-text {
+  font-style: italic;
+  color: #ff4757;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Battle Arena */
+.battle-arena {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.choice-display p {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin-bottom: 10px;
+}
+
+.badge {
+  font-size: 3rem;
+  background: white;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #4facfe;
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4);
+  overflow: hidden;
+}
+
+/* Result Banner */
+.result-banner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #2ed573;
+  text-shadow: 0 0 10px rgba(46, 213, 115, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Instructions and Move Options */
+.instruction {
+  font-size: 1rem;
+  color: #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.option-btn {
+  font-size: 2.5rem;
+  background: #ffffff;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-btn:hover {
+  transform: scale(1.15);
+  background: #00f2fe;
+  box-shadow: 0 0 20px #00f2fe;
+}
+
+.option-btn:active {
+  transform: scale(0.95);
+}
+
+/* Reset Button */
+.reset-btn {
+  background: transparent;
+  border: 2px solid #ff4757;
+  color: #ff4757;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #ff4757;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
+}
+
+/* Bonus: Subtle Hand Shake Animation */
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-8px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease infinite alternate;
+  animation-play-state: paused; /* Can be triggered later via JS class injection */
+}
+.starter-img{
+	height: 80%;	
+}
+.play-img{
+	height: 100%;
+}

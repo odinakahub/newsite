@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <h1 class="game-title">Rock Paper Scissors</h1>
+    
+    <!-- Score Board -->
+    <div class="score-board">
+      <div class="score-box">
+        <span class="score-label">PLAYER</span>
+        <span class="score-number" id="playerScore">0</span>
+      </div>
+      <div class="vs-text">VS</div>
+      <div class="score-box">
+        <span class="score-label">COMPUTER</span>
+        <span class="score-number" id="computerScore">0</span>
+      </div>
+    </div>
+
+    <!-- Battle Arena (Showcasing Selections) -->
+    <div class="battle-arena">
+      <div class="choice-display">
+        <p>Player Picked</p>
+        <div class="badge animate-shake" id="playerId"><img class="starter-img" src="qplayer.jpg" alt="" /></div>
+      </div>
+      <div class="choice-display">
+        <p>Computer Picked</p>
+        <div class="badge animate-shake"  id="computerId"><img class="starter-img" src="qcomputer.jpg" alt="" /></div>
+      </div>
+    </div>
+
+    <!-- Result Banner -->
+    <div class="result-banner">
+      <h2 id="successMsg">WAITING FOR THE WINNER!</h2>
+    </div>
+
+    <!-- Interactive Options -->
+    <p class="instruction">Make your move:</p>
+    <div class="options-container" >
+      <button id="myButton" class="option-btn" title="Rock" onclick="playerPick('rock', 0)"><img class="play-img" src="rock.png" alt="" /></button>
+      <button id="myButton" class="option-btn" title="Paper" onclick="playerPick('paper', 1)"><img class="play-img" src="paper.png" alt="" /></button>
+      <button id="myButton" class="option-btn" title="Scissors" onclick="playerPick('scissors', 2)"><img class="play-img" src="scissors.png" alt="" /></button>
+    </div>
+
+    <!-- Reset Button -->
+    <button class="reset-btn" onclick="resetButton()">Reset Game (<span id="countId">0</span>)</button>
+  </div>
+	<script type="text/javascript" src="rps.js"></script>
+</body>
+</html>
